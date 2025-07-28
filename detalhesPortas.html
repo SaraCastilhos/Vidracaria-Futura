@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes - Box de Vidro | Vidraçaria Futura</title>
+
+    <!--Estilos Externos-->
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="IMG/logo.png" type="image/x-icon">
+    <script src="script.js"></script>
+
+    <!--Estilos Internos-->
+    <style>
+    main {
+      padding: 3rem 2rem;
+    }
+
+    .categoria > h3 {
+        color: var(--vermelho);
+        text-align: center;
+    }
+
+    .categoria > p {
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .produtos-cards {
+        display: flex;
+        justify-content: center;
+    }
+
+    .botao {
+      display: flex;
+      justify-content: center;
+    }
+
+    .botao a {
+        padding: 0.5rem;
+        padding-inline: 30vmin;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        margin-top: 2rem;
+        background-color: var(--azul);
+    }
+
+     .botao a {
+        color: var(--branco);
+        text-decoration: none;
+    }
+
+    @media(max-width: 768px){
+        .produtos-cards {
+            flex-direction: column;
+        }
+
+        .botao a {
+            padding-inline: 6.4rem;
+        }
+    }
+
+    #orcamento input {
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+</style>
+</head>
+
+<body>
+  <!--Cabeçalho-->
+  <header>
+    <div class="logo-container"><a href="index.html"><img src="IMG/logo.png" alt="Logo"></a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="quemsomos.html">Quem Somos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Conteúdo Central-->
+  <main>
+    <section class="categoria">
+      <h3>Portas</h3>
+      <p>Nossas portas são produzidas sob medida, sendo ideais para divisões internas ou entradas elegantes, podem ser de correr, pivotantes ou articuladas, com ferragens de qualidade e excelente acabamento.</p>
+          <div class="produtos-cards">
+            <div class="produto">
+              <img src="IMG/Foto Porta de Correr.png" alt="Porta de Correr" />
+                <div class="produto-info">
+                  <h3>Porta de Correr 4 Folhas</h3>
+                  <p>A partir de R$ 800,00</p>
+                </div>
+            </div>
+            <div class="produto">
+              <img src="IMG/Foto Porta Mão-Amiga.png" alt="Porta Mão-Amiga" />
+                <div class="produto-info">
+                  <h3>Porta de Correr Mão-Amiga</h3>
+                  <p>A partir de R$ 850,00</p>
+                </div>
+            </div>
+          </div>
+    </section>
+
+    <div class="botao">
+     <a href="#orcamento" class="abrir-orcamento">Solicite seu Orçamento</a>
+    </div>
+  </main>
+
+  <!--Paineis Laterais-->
+  <div id="orcamento" class="painel">
+    <div class="painel-conteudo">
+      <a href="#" class="fechar">&times;</a>
+
+      <h2>Monte seu Orçamento</h2>
+      <form class="orcamento-f">
+        <label for="produto">Produto</label>
+        <select id="produto" required onchange="mostrarMedidas()">
+          <option value="">Selecione...</option>
+          <option value="area">Box de Vidro (m²)</option>
+          <option value="area">Box de Acrílico (m²)</option>
+          <option value="area">Porta de Vidro (m²)</option>
+          <option value="area">Janela de Vidro (m²)</option>
+          <option value="linear">Corrimão / Guarda-Corpo (metro linear)</option>
+          <option value="area">Espelho Sob Medida (m²)</option>
+        </select>
+
+        <div class="medidas" id="medidas-area">
+          <label for="largura">Largura (em metros)</label>
+          <input type="number" id="largura" step="0.01" min="0.1">
+
+          <label for="altura">Altura (em metros)</label>
+          <input type="number" id="altura" step="0.01" min="0.1">
+        </div>
+
+        <div class="medidas" id="medidas-linear">
+          <label for="comprimento">Comprimento (em metros lineares)</label>
+          <input type="number" id="comprimento" step="0.01" min="0.1">
+        </div>
+
+
+         <div class="resultado" id="resultado">Valor estimado: R$0.00</div>
+        
+          <button type="button" onclick="mostrarResultado()">Calcular</button>
+          <button onclick="alert('Produto adicionado ao carrinho com sucesso!')">Adicionar ao carrinho</button>
+      </form>
+      <div class="acoes">
+        <a href="#carrinho" class="ver-carrinho">Ver carrinho</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="carrinho" class="painel">
+    <div class="painel-conteudo">
+      <a href="#orcamento" class="fechar">&times;</a>
+
+      <h2>Meu Carrinho</h2>
+      <div class="acoes">
+        <p>Total: R$ 0.00</p>
+        <a href="#pedido" class="finalizar">Finalizar Pedido</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="pedido" class="painel">
+    <div class="painel-conteudo" style="height: auto;">
+      <a href="#orcamento" class="fechar">&times;</a>
+     
+      <h2>Finalizar Pedido</h2>
+
+      <div class="resumo">
+        <p>Resumo</p>
+        <p style="text-align: end; padding-top: 5rem;">Total: R$ 0.00</p>
+      </div>
+     
+      <form class="dados" action="/PHP/pedido.php" method="post">
+        <p>Dados do Cliente</p>
+
+        <label for="name">Nome completo</label>
+        <input type="text" id="name" name="name" required>
+         <label for="e-email">E-email</label>
+        <input type="email" id="e-email" name="e-email" required>
+         <label for="telefone">Telefone / WhatsApp</label>
+        <input type="tel" id="telefone" name="telefone" required>
+         <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" name="endereco" required>
+        <label>Observações (opcional)</label>
+        <textarea style="max-width: 100%; min-width: 100%;"></textarea>
+        
+        <button type="submit"><a href="#acompanhamento" class="enviar">Enviar Pedido</a></button>
+      </form> 
+    </div>
+  </div>
+
+  <div id="acompanhamento" class="painel">
+    <div class="painel-conteudo">
+      <a href="#orcamento" class="fechar">&times;</a>
+     
+      <h2>Pedido Recebido com Sucesso!</h2>
+      <p>Obrigado por escolher a Vidraçaria Futura. Em breve entraremos em contato para confirmar os detalhes do seu pedido.</p>
+
+      <div class="resumo">
+        <p>Resumo</p>
+        <p style="text-align: end; padding-top: 5rem;">Total: R$ 0.00</p>
+      </div>
+
+      <div class="acoes">
+        <a href="https://api.whatsapp.com/send?phone=555198163859" class="acompanhar-whats" target="_blank">Acompanhar no WhatsApp<img src="IMG/iconewhats.png" alt="Icone do Whatsapp"></a>
+        <a href="index.html" class="voltar">Voltar para a Tela Inicial</a>
+      </div>
+      
+    </div>
+  </div>
+
+  <!--Rodapé-->
+   <footer>
+    <p>&copy; 2025 Vidraçaria Futura. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

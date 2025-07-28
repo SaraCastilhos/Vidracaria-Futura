@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidraçaria Futura</title>
+
+  <!--Estilos Externos-->
+  <link rel="stylesheet" href="estilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="IMG/logo.png" type="image/x-icon">
+
+  <!--Estilos Internos-->
+  <style>
+  /*Padrão Dessas Sessões*/
+  section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  /*Cards Padrões Dessa Página*/
+  .produtos .cards, .depoimentos .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .card {
+    background-color: var(--branco);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .card a {
+    text-decoration: none;
+    color: var(--preto);
+  }
+  </style>
+</head>
+
+<body>
+  <!--Cabeçalho-->
+  <header>
+    <div class="logo-container">
+      <img src="IMG/logo.png" alt="Logo Vidraçaria Futura">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="quemsomos.html">Quem Somos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Banner-->
+  <div class="banner">
+    <img src="IMG/Banner 1 - Vidraçaria Futura (2900 x 880 px).png" alt="Banner da Vidraçaria">
+  </div>
+
+  <main>
+     <!--Introdução-->
+    <section>
+      <h2 style="color: var(--vermelho)">Sua visão refletida em vidro</h2>
+      <p>Projetos sob medida em vidro temperado, espelhos e fachadas. Qualidade e estilo com segurança.</p>
+    </section>
+
+    <!--Sessão de Produtos-->
+    <section class="produtos">
+      <h3 style="color: var(--azul)">Produtos e Serviços</h3>
+      <div class="cards">
+        <div class="card"><a href="produtos.html">Ambientes Internos</a></div>
+        <div class="card"><a href="produtos.html">Aberturas</a></div>
+        <div class="card"><a href="produtos.html">Estruturas Externas e Segurança</a></div>
+      </div>
+    </section>
+
+    <!--Sessão de Contato | WhatsApp-->
+    <div class="chamada">
+      <h3>NÃO ENCONTROU O QUE PRECISA?</h3>
+      <p><i>Entre em contato com nossa equipe e descreva seu projeto. Teremos o prazer em ajudar.</i></p>
+      <a href="https://api.whatsapp.com/send?phone=555198163859" target="_blank">FALAR COM A FUTURA <img src="IMG/iconewhats.png" alt="Icone do Whatsapp"></a>
+    </div>
+
+    <!--Avaliações de Clientes-->
+    <section class="depoimentos">
+      <h3 style="color: var(--vermelho)">Avaliação de nossos clientes</h3>
+      <div class="cards">
+        <div class="card">"Excelente atendimento e acabamento impecável." - João M.</div>
+        <div class="card">"A sacada ficou perfeita! Recomendo muito." - Carla S.</div>
+        <div class="card">"Entregaram antes do prazo. Ótimos profissionais." - Renata D.</div>
+      </div>
+    </section>
+
+    <!--Feedback-->
+    <section>
+      <h3 style="color: var(--azul);">Quer deixar o seu feedback?</h3>
+      <form action="/PHP/feedback.php" method="post">
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <textarea placeholder="Deixe a sua opinião ou sugestão..."></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <!--Localização-->
+    <section class="localizacao">
+
+      <h3 style="color: var(--vermelho);">Visite a nossa loja!</h3>
+      <p>Clique no mapa para visualizar o caminho.</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.4923134382852!2d-50.76431982467336!3d-29.589371575155923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951923b49e6865b9%3A0xe19eebeac8b8a002!2sVidra%C3%A7aria%20Futura!5e0!3m2!1sen!2sbr!4v1752101373615!5m2!1sen!2sbr" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+        <div class="localizacao-text">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Rua Plínio Salgado, Bairro Viaduto, Cidade de Igrejinha, Rio Grande do Sul, Brasil</p>
+        </div>
+
+        <!--Horário de Funcionamento-->
+        <div class="horario">
+          <div>
+            <h3>Horário de Funcionamento</h3>
+            <p>De Segunda a Sexta:</p>
+          </div>
+          <div>
+            <p>07:30AM - 11:00AM<br>13:30PM - 18:00PM</p>
+          </div>
+        </div>
+    </section>
+
+    <!--Redes Sociais-->
+    <section class="redes-sociais">
+      <p>Nos siga nas redes sociais!</p>
+      <div class="icones-sociais">
+        <a class="instagram" href="https://www.instagram.com/vidracaria.futura.igrejinha/" target="_blank">
+          <i class="fa-brands fa-square-instagram"></i>
+        </a>
+        <a class="facebook" href="https://www.facebook.com/" target="_blank">
+        <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a class="youtube" href="https://www.youtube.com/" target="_blank">
+          <i class="fa-brands fa-square-youtube"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!--Rodapé-->
+  <footer>
+    <p>&copy; 2025 Vidraçaria Futura. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

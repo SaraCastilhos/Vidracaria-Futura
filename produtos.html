@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos | Vidraçaria Futura</title>
+
+  <!-- Estilos externos -->
+  <link rel="stylesheet" href="estilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="IMG/logo.png" type="image/x-icon">
+
+  <!-- Estilos internos -->
+  <style>
+    main {
+      padding: 3rem 2rem;
+    }
+
+    h2 {
+      color: var(--vermelho);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 5.5vmin;
+    }
+
+    h3 {
+      color: var(--azul);
+      margin: 3rem 0 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .categoria > h3 {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="IMG/logo.png" alt="Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="quemsomos.html">Quem Somos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <h2>Catálogo de Produtos</h2>
+    <input type="text" id="pesquisa" placeholder="Buscar produto...">
+
+    <!-- Ambientes Internos -->
+    <section class="categoria">
+      <h3>Ambientes Internos</h3>
+      <div class="produtos-cards">
+        <div class="produto">
+          <img src="IMG/Box de Vidro.jpeg" alt="Box de Vidro" />
+          <div class="produto-info">
+            <h3>Box de Vidro</h3>
+            <p>Feitos sob medida para banheiros modernos, com segurança e sofisticação.</p>
+            <a href="detalhesBoxV.html">Ver Detalhes</a>
+          </div>
+        </div>
+
+        <div class="produto">
+          <img src="IMG/Foto Box.png" alt="Box de Acrílico" />
+          <div class="produto-info">
+            <h3>Box de Acrílico</h3>
+            <p>Solução econômica e leve, ideal para quem busca praticidade no banheiro.</p>
+            <a href="detalhesBoxA.html">Ver Detalhes</a>
+          </div>
+        </div>
+
+        <div class="produto">
+          <img src="IMG/Foto Espelho.png" alt="Espelho" />
+          <div class="produto-info">
+            <h3>Espelhos sob Medida</h3>
+            <p>A especialidade que combina praticidade e um toque moderno para qualquer ambiente.</p>
+            <a href="detalhesEspelhos.html">Ver Detalhes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aberturas -->
+    <section class="categoria" style="max-width: 970px;">
+      <h3>Aberturas</h3>
+      <div class="produtos-cards">
+        <div class="produto">
+          <img src="IMG/Foto Porta.png" alt="Porta" />
+          <div class="produto-info">
+            <h3>Portas</h3>
+            <p>Portas de correr, pivotantes ou articuladas em vidro temperado para ambientes internos e externos.</p>
+            <a href="detalhesPortas.html">Ver Detalhes</a>
+          </div>
+        </div>
+
+        <div class="produto">
+          <img src="IMG/Foto Janela.png" alt="Janela" />
+          <div class="produto-info">
+            <h3>Janelas</h3>
+            <p>Janelas sob medida em vidro temperado, PVC e alumínio, com acabamento moderno.</p>
+            <a href="detalhesJanelas.html">Ver Detalhes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estruturas Externas -->
+    <section class="categoria">
+      <h3>Estruturas Externas</h3>
+      <div class="produtos-cards">
+        <div class="produto">
+          <img src="IMG/Foto Fechamento.jpeg" alt="Fechamento de Sacada" />
+          <div class="produto-info">
+            <h3>Fechamento de Sacadas</h3>
+            <p>Sistemas de envidraçamento panorâmico para sacadas com proteção contra vento e ruído.</p>
+            <a href="detalhesFechamentos.html">Ver Detalhes</a>
+          </div>
+        </div>
+
+        <div class="produto">
+          <img src="IMG/Foto Pergolado.png" alt="Cobertura de Pergolado" />
+          <div class="produto-info">
+            <h3>Coberturas</h3>
+            <p>Coberturas de vidro para varandas, pergolados e áreas externas.</p>
+            <a href="detalhesCoberturas.html">Ver Detalhes</a>
+          </div>
+        </div>
+
+        <div class="produto">
+          <img src="IMG/Foto Guarda-corpo.png" alt="Corrimão e Guarda-corpo" />
+          <div class="produto-info">
+            <h3>Corrimãos e Guarda-Corpos</h3>
+            <p>Soluções em vidro temperado e aço inox para segurança e elegância em escadas, mezaninos e sacadas.</p>
+            <a href="detalhesCeG.html">Ver Detalhes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Redes sociais -->
+  <section class="redes-sociais">
+    <p>Nos siga nas redes sociais!</p>
+    <div class="icones-sociais">
+      <a class="instagram" href="https://www.instagram.com/vidracaria.futura.igrejinha/" target="_blank">
+        <i class="fa-brands fa-square-instagram"></i>
+      </a>
+      <a class="facebook" href="https://www.facebook.com/" target="_blank">
+        <i class="fa-brands fa-square-facebook"></i>
+      </a>
+      <a class="youtube" href="https://www.youtube.com/" target="_blank">
+        <i class="fa-brands fa-square-youtube"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Vidraçaria Futura. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
