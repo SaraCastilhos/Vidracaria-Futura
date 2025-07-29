@@ -120,7 +120,7 @@ form {
   width: 80vmin;
   margin: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;/* Usa flexbox para organizar os elementos do formulário em coluna com espaçamento entre eles */
   gap: 1rem;
 }
 
@@ -178,8 +178,8 @@ iframe {
 /* Horário de Funcionamento */
 .horario {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
   padding-top: 6vmin;
   gap: 10vmin;
 }
@@ -203,7 +203,7 @@ iframe {
 /* Cards de Produtos */
 .produtos-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));/* Colunas com mínimo de 280px, e no máximo 1fr (ou seja, uma fração do espaço disponível) */
   gap: 1.5rem;
 }
 
@@ -271,7 +271,7 @@ iframe {
 
 .foto-topicos {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-evenly; /*Espaços iguais entre, antes e depois deles.*/
   align-items: center;
   padding-top: 2rem;
 }
@@ -366,18 +366,18 @@ footer {
 
 /* PAINEIS | Padrões*/
 .painel {
-  position: fixed;
+  position: fixed; /*Faz o painel ficar fixo na tela, mesmo rolando a página.*/
   top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  overflow-y: auto;
-  transition: right 0.3s ease-in-out;
+  right: -100%; /*Posiciona o painel fora da tela à direita.*/
+  width: 100%; 
+  height: 100%; /*Faz o painel cobrir toda a largura e altura da tela.*/
+  z-index: 1000; /*Mantém o painel sobre os outros elementos.*/
+  overflow-y: auto; /*Permite rolagem vertical caso o conteúdo seja maior que a tela.*/
+  transition: right 0.3s ease-in-out; /*Cria uma animação suave ao abrir ou fechar, movendo pela direita*/
 }
 
 .painel:target {
-  right: 0;
+  right: 0; /*Move o painel para dentro da tela, fazendo ele aparecer.*/
 }
 
 .painel-conteudo {
@@ -574,17 +574,14 @@ footer {
 }
 
 /* Responsivo | Paineis Laterais*/
+/* As regras só valem para telas médias ou maiores (como tablets e desktops).*/
 @media (min-width: 768px) {
   .painel {
     width: 400px;
-    right: -400px;
+    right: -400px;/* Em vez de ocupar a tela inteira, o painel fica com largura fixa de 400px e escondido à direita.*/
   }
 
   .painel:target {
-    right: 0;
-  }
-
-  .painel-conteudo {
-    height: 100%;
+    right: 0; /*Ao ser “ativado” via :target, ele desliza para dentro da tela.*/
   }
 }
