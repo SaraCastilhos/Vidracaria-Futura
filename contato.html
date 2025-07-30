@@ -63,13 +63,13 @@
       <p style="font-size: 2vmin; color: #5b5b5b; font-weight: 600;">Dúvidas?</p>
       <h3>Entre em Contato</h3>
       <form action="/PHP/contato.php" method="post">
-        <input type="text" placeholder="Seu nome" required>
-        <input type="email" placeholder="Seu e-mail" required>
-        <textarea placeholder="Mensagem..."></textarea>
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" placeholder="Mensagem..." required></textarea>
         <button type="submit">Enviar</button>
       </form>
     </section>
-  
+
     <!--Números de Telefone | E-mails-->
     <div class="telefone-email">
         <p>Se preferir, fale diretamente com a nossa equipe pelos telefones:</p>

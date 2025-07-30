@@ -100,9 +100,9 @@
     <section>
       <h3 style="color: var(--azul);">Quer deixar o seu feedback?</h3>
       <form action="/PHP/feedback.php" method="post">
-        <input type="text" placeholder="Seu nome" required>
-        <input type="email" placeholder="Seu e-mail" required>
-        <textarea placeholder="Deixe a sua opinião ou sugestão..."></textarea>
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" placeholder="Deixe a sua opinião ou sugestão..." required></textarea>
         <button type="submit">Enviar</button>
       </form>
     </section>
