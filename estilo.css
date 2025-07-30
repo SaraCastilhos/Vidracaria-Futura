@@ -41,7 +41,7 @@ header {
   background-color: var(--branco);
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between; /*Espaça os itens nas extremidades (logo à esquerda, menu à direita*/
+  justify-content: space-between; /*Espaça os itens nas extremidades (logo à esquerda, menu à direita)*/
   align-items: center; /*Alinha Verticalmente*/
   position: sticky; /* Faz o cabeçalho grudar no topo da tela ao rolar a página.*/
   top: 0;
